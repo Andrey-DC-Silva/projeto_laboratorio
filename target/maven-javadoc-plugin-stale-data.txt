@@ -1,0 +1,43 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+--release
+24
+-sourcepath
+'C:/Users/andre/OneDrive/Documentos/NetBeansProjects/Laboratorio/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/andre/OneDrive/Documentos/NetBeansProjects/Laboratorio/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Laboratorio 1.0 API'
+-use
+-version
+-windowtitle
+'Laboratorio 1.0 API'
+partes_laboratorio
+teste_laboratorio
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\src\main\java = 1748290355506
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\allclasses-index.html = 1748398166489
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\allpackages-index.html = 1748398166492
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\element-list = 1748398166386
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\help-doc.html = 1748398166522
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\index-all.html = 1748398166512
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\index.html = 1748398166468
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\member-search-index.js = 1748398166497
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\module-search-index.js = 1748398166493
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\overview-summary.html = 1748398166519
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\overview-tree.html = 1748398166462
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\package-search-index.js = 1748398166495
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\search.html = 1748398166516
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\tag-search-index.js = 1748398166498
+C:\Users\andre\OneDrive\Documentos\NetBeansProjects\Laboratorio\target\reports\apidocs\type-search-index.js = 1748398166496
