@@ -2,18 +2,23 @@ package partes_laboratorio;
 
 import java.time.LocalDate;
 
-public abstract class Pessoa {
-    private String identificacao;
+public abstract class Pessoa{
+    private int id;
     private String nome;
     private String cpf;
     private LocalDate dtNasc;
     
-    public Pessoa(String n) {
-        nome = n;
+    public Pessoa(int id, String nome, String cpf, LocalDate dtNasc) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dtNasc = dtNasc;
     }
-    public Pessoa() {
+    
+    public int getId() {
+        return id;
     }
-
+        
     public String getNome(){
         return nome;
     }
@@ -24,7 +29,6 @@ public abstract class Pessoa {
     public String getCpf() {
         return cpf;
     }
-    
     public void setCpf(String cpf) {
         cpf = cpf.replace(".", "").replace("-", "").trim();
         if (cpf != null && cpf.length() == 11){
@@ -41,15 +45,4 @@ public abstract class Pessoa {
         this.dtNasc = dtNasc;
     }
     
-    public String getIdentificacao() {
-        return identificacao;
-    }
-    public void setIdentificacao(String identificacao) {
-        this.identificacao = identificacao;
-    }
-    
-     @Override
-    public String toString() {
-        return nome;
-    }
 }

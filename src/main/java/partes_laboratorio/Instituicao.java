@@ -1,17 +1,16 @@
 package partes_laboratorio;
 
 public class Instituicao {
-    private int identificacao;
+    private int id;
     private String nome;
-    //cnpj?
     private String tipo;
     private String endereco;
 
     public int getIdentificacao() {
-        return identificacao;
+        return id;
     }
-    public void setIdentificacao(int identificacao) {
-        this.identificacao = identificacao;
+    public void setIdentificacao(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -35,5 +34,9 @@ public class Instituicao {
         this.endereco = endereco;
     }
     
+    @Override
+    public String toString(){
+        return nome;
+    }
     
 }

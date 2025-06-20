@@ -3,26 +3,17 @@ package partes_laboratorio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sala {
+public class Sala implements Mostrar{
     private int numero;
-    private String bloco;
+    private TipoSala tipo;
+    private Estado estado;
     private List<Equipamento> equipamentos = new ArrayList<>();
-    private Tecnico tecnico;
-    private String tipo;
-    private String estado;
-
+    
     public int getNumero() {
         return numero;
     }
     public void setNumero(int numero) {
         this.numero = numero;
-    }
-
-    public String getBloco() {
-        return bloco;
-    }
-    public void setBloco(String bloco) {
-        this.bloco = bloco;
     }
 
     public List<Equipamento> getEquipamentos() {
@@ -31,27 +22,45 @@ public class Sala {
     public void setEquipamentos(List<Equipamento> equipamentos) {
         this.equipamentos = equipamentos;
     }
-
-    public Tecnico getTecnico() {
-        return tecnico;
-    }
-    public void setTecnico(Tecnico tecnico) {
-        this.tecnico = tecnico;
-    }
-
-    public String getTipo() {
+    
+    public TipoSala getTipo() {
         return tipo;
     }
-    public void setTipo(String tipo) {
+    public void setTipo(TipoSala tipo) {
         this.tipo = tipo;
     }
 
-    public String getEstado() {
+    public Estado getEstado() {
         return estado;
     }
-    public void setEstado(String estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
     
+    @Override
+        public void mostrarDados(){
+            System.out.println("---- Dados da Sala ----");
+            System.out.println("Número: " + numero);
+            System.out.println("Tipo: " + tipo);
+            System.out.println("Estado: " + estado);
+            System.out.println("---Equipamentos na Sala:");
+            if(equipamentos.isEmpty()) {
+                System.out.println(" Nenhum equipamento no local.");
+            }
+            else{
+                for(Equipamento e : equipamentos) {
+                    System.out.println("Modelo: " + e.getModelo() + ", Estado: " + e.getEstado());
+                }
+            }
+            System.out.println("===================");
+    }
+    
+    @Override
+        public void mostrarResumo(){
+            System.out.println("--- Resumo da Sala ---");
+            System.out.println("Número: " + numero);
+            System.out.println("Tipo: " + tipo);
+            System.out.println("Estado: " + estado);
+        }
     
 }
