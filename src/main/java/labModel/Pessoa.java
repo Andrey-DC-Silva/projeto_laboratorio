@@ -1,4 +1,4 @@
-package partes_laboratorio;
+package labModel;
 
 import java.time.LocalDate;
 
@@ -30,8 +30,8 @@ public abstract class Pessoa{
         return cpf;
     }
     public void setCpf(String cpf) {
-        cpf = cpf.replace(".", "").replace("-", "").trim();
         if (cpf != null && cpf.length() == 11){
+            cpf = cpf.replace(".", "").replace("-", "").trim();
             this.cpf = cpf;
         } else {
             System.out.println("CPF inválido");

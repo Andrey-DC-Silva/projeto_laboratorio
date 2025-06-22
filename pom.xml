@@ -22,6 +22,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>24</maven.compiler.release>
-        <exec.mainClass>laboratorio.Laboratorio</exec.mainClass>
+        <exec.mainClass>labTests.Laboratorio</exec.mainClass>
     </properties>
 </project>

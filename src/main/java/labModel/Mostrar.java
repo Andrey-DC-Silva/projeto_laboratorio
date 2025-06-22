@@ -1,4 +1,4 @@
-package partes_laboratorio;
+package labModel;
 
 public interface Mostrar {
     public void mostrarDados();
