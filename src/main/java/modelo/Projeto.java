@@ -1,10 +1,13 @@
-package labModel;
+package modelo;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Projeto implements Mostrar {
+    
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     private String titulo;
     private String descricao;
@@ -100,13 +103,13 @@ public class Projeto implements Mostrar {
         System.out.println("---- Dados do Projeto ----");
         System.out.println("Titulo: " + titulo);
         System.out.println("Descrição: " + descricao);
-        System.out.println("Início: " + dtInicio);
-        System.out.println("Fim: " + dtFim);
+        System.out.println("Início: " + dtInicio.format(formato));
+        System.out.println("Fim: " + dtFim.format(formato));
         System.out.println("Status: " + status);
 
         System.out.println("Pesquisadores envolvidos:");
         for (Pesquisador p : pesquisadores) {
-            System.out.println(" - " + p.getNome());
+            System.out.println(" - ID:" + p.getId() + ", Nome: " + p.getNome());
         }
 
         System.out.println("Experimentos relacionados:");
@@ -115,7 +118,7 @@ public class Projeto implements Mostrar {
         } else {
             for (Experimento e : experimentos) {
                 System.out.println(" - Código: " + e.getCodigo()
-                        + ", Título: " + e.getTitulo() + ", Data: " + e.getDtRealizacao());
+                        + ", Título: " + e.getTitulo() + ", Data: " + e.getDtRealizacao().format(formato));
             }
         }
         System.out.println("===============================");
@@ -127,11 +130,10 @@ public class Projeto implements Mostrar {
         System.out.println("===============================");
         System.out.println("---- Resumo do Projeto ----");
         System.out.println("Título: " + titulo);
-        System.out.println("Descrição: " + descricao);
         System.out.println("Status: " + status);
-        System.out.print(" - Início: " + dtInicio);
+        System.out.print(" - Início: " + dtInicio.format(formato));
         if (dtFim != null) {
-            System.out.println(" - Fim: " + dtFim);
+            System.out.println(" - Fim: " + dtFim.format(formato));
         }
         System.out.println("===============================");
     }

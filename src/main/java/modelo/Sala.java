@@ -1,4 +1,4 @@
-package labModel;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ public class Sala implements Mostrar {
         this.codigo = codigo;
         this.tipo = tipo;
         this.estado = estado;
+        this.equipamentos = equipamentos != null ? equipamentos : new ArrayList<>();
     }
 
     public String getCodigo() {

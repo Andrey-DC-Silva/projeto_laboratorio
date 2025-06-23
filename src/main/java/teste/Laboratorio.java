@@ -1,13 +1,14 @@
-package labTests;
+package teste;
 
-import labModel.Pesquisador;
-import labModel.Tecnico;
-import labModel.Equipamento;
-import labModel.Sala;
-import labModel.Projeto;
-import labModel.Experimento;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import modelo.Equipamento;
+import modelo.Experimento;
+import modelo.Pesquisador;
+import modelo.Projeto;
+import modelo.Sala;
+import modelo.Tecnico;
 
 public class Laboratorio {
 
@@ -18,8 +19,6 @@ public class Laboratorio {
                 "Laboratório de Biologia",
                 "Livre"
         );
-        
-        // sala1.setEstado("Ocupado");
         
         Sala sala2 = new Sala(
                 "A201",
@@ -35,16 +34,17 @@ public class Laboratorio {
         );
 
         Tecnico tecnico1 = new Tecnico(
-                1134,
+                "1134",
                 "Carlos Silva",
                 "123.456.789-01",
-                LocalDate.of(1985, 3, 10),
-                "Manutenção de Equipamentos"
+                LocalDate.parse("20/10/2000", formato),
+                "Manutenção de Equipamentos",
+                null
         );
         tecnico1.adicionarEquipamento(eq1);
 
         Pesquisador pesquisador1 = new Pesquisador(
-                1392,
+                "1392",
                 "Ana de Lima",
                 "012.221.123-20",
                 LocalDate.parse("20/10/2000", formato),
@@ -54,7 +54,7 @@ public class Laboratorio {
         pesquisador1.adicionarAfiliacao("INS");
 
         Pesquisador pesquisador2 = new Pesquisador(
-                1424,
+                "1424",
                 "Roberto Fonseca",
                 "123.451.921-12",
                 LocalDate.parse("10/02/1990", formato),
@@ -75,7 +75,7 @@ public class Laboratorio {
         );
 
         Experimento exp1 = new Experimento(
-                001,
+                "001",
                 "Verificação da Resistência Viral",
                 "Utilização do microscópio para análise da capacidade de sobreviver e se multiplicar "
                 + "mesmo na presença de medicamentos antivirais que normalmente o controlariam.",
@@ -85,7 +85,7 @@ public class Laboratorio {
         );
 
         Experimento exp2 = new Experimento(
-                002,
+                "002",
                 "Análise dos Dados do Experimento 1",
                 "Organização, análise e documentação dos dados adquiridos",
                 LocalDate.parse("01/09/2021", formato),
@@ -102,18 +102,24 @@ public class Laboratorio {
 
         projeto1.adicionarExperimento(exp1);
         projeto1.adicionarExperimento(exp2);
+        
+//        sala1.mostrarDados();
+//        sala1.mostrarResumo();
 
-        sala1.mostrarDados();
-        sala1.mostrarResumo();
-        eq1.mostrarDados();
-        eq1.mostrarResumo();
-        tecnico1.mostrarDados();
-        tecnico1.mostrarResumo();
-        pesquisador1.mostrarDados();
-        pesquisador1.mostrarResumo();
-        projeto1.mostrarDados();
-        projeto1.mostrarResumo();
-        exp1.mostrarDados();
-        exp1.mostrarResumo();
-    }
+//        eq1.mostrarDados();
+//        eq1.mostrarResumo();
+
+//        tecnico1.mostrarDados();
+//        tecnico1.mostrarResumo();
+
+//        pesquisador1.mostrarDados();
+//        pesquisador1.mostrarResumo();
+
+//        exp1.mostrarDados();
+//        exp1.mostrarResumo();
+
+//        projeto1.mostrarDados();
+//        projeto1.mostrarResumo();
+
+    }   
 }

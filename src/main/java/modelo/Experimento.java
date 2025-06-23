@@ -1,20 +1,23 @@
-package labModel;
+package modelo;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Experimento implements Mostrar {
+    
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    private int codigo;
+    private String codigo;
     private String titulo;
     private String descricao;
     private LocalDate dtRealizacao;
     private Sala sala;
-    private List<Equipamento> equipamentosUsados = new ArrayList<>();
+    private List<Equipamento> equipamentos = new ArrayList<>();
     private Pesquisador responsavel;
 
-    public Experimento(int codigo, String titulo, String descricao, LocalDate dtRealizacao, Sala sala, Pesquisador responsavel) {
+    public Experimento(String codigo, String titulo, String descricao, LocalDate dtRealizacao, Sala sala, Pesquisador responsavel) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -23,11 +26,11 @@ public class Experimento implements Mostrar {
         this.responsavel = responsavel;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
@@ -63,17 +66,17 @@ public class Experimento implements Mostrar {
         this.sala = sala;
     }
 
-    public List<Equipamento> getEquipamentosUsados() {
-        return equipamentosUsados;
+    public List<Equipamento> getEquipamentos() {
+        return equipamentos;
     }
 
-    public void setEquipamentosUsados(List<Equipamento> equipamentosUsados) {
-        this.equipamentosUsados = equipamentosUsados;
+    public void setEquipamento(List<Equipamento> equipamentosUsados) {
+        this.equipamentos = equipamentosUsados;
     }
 
     public void adicionarEquipamento(Equipamento equipamento) {
-        if (equipamento != null && !equipamentosUsados.contains(equipamento)) {
-            equipamentosUsados.add(equipamento);
+        if (equipamento != null && !equipamentos.contains(equipamento)) {
+            equipamentos.add(equipamento);
         }
     }
 
@@ -98,15 +101,15 @@ public class Experimento implements Mostrar {
         System.out.println("Código: " + codigo);
         System.out.println("Título: " + titulo);
         System.out.println("Descrição: " + descricao);
-        System.out.println("Data de Realização: " + dtRealizacao);
+        System.out.println("Data de Realização: " + dtRealizacao.format(formato));
         System.out.println("Sala: " + sala);
         System.out.println("Responsável: " + (responsavel != null ? responsavel.getNome() : "Não definido"));
 
         System.out.println("Equipamentos usados:");
-        if (equipamentosUsados.isEmpty()) {
+        if (equipamentos.isEmpty()) {
             System.out.println("  Nenhum equipamento registrado.");
         } else {
-            for (Equipamento e : equipamentosUsados) {
+            for (Equipamento e : equipamentos) {
                 System.out.println("  - " + e.getModelo() + " (" + e.getEstado() + ")");
             }
         }
@@ -120,8 +123,8 @@ public class Experimento implements Mostrar {
         System.out.println("--- Resumo do Equipamento ---");
         System.out.println("Codigo: " + codigo);
         System.out.println("Titulo: " + titulo);
-        System.out.println("Data: " + dtRealizacao);
-        System.out.println("Responsável: " + responsavel);
+        System.out.println("Data: " + dtRealizacao.format(formato));
+        System.out.println("Responsável - Id:" + responsavel.getId() + " / " + responsavel);
         System.out.println("===============================");
     }
 

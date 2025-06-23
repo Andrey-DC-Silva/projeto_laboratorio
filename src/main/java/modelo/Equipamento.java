@@ -1,6 +1,10 @@
-package labModel;
+package modelo;
+
+import java.time.format.DateTimeFormatter;
 
 public class Equipamento implements Mostrar {
+    
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     private String modelo;
     private String descricao;

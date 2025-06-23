@@ -1,21 +1,25 @@
-package labModel;
+package modelo;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public abstract class Pessoa{
-    private int id;
+    
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    
+    private String id;
     private String nome;
     private String cpf;
     private LocalDate dtNasc;
     
-    public Pessoa(int id, String nome, String cpf, LocalDate dtNasc) {
+    public Pessoa(String id, String nome, String cpf, LocalDate dtNasc) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.dtNasc = dtNasc;
     }
     
-    public int getId() {
+    public String getId() {
         return id;
     }
         
@@ -43,6 +47,11 @@ public abstract class Pessoa{
     }
     public void setDtNasc(LocalDate dtNasc){
         this.dtNasc = dtNasc;
+    }
+    
+    @Override
+    public String toString(){
+        return nome;
     }
     
 }

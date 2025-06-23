@@ -1,4 +1,4 @@
-package labModel;
+package modelo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -9,9 +9,10 @@ public class Tecnico extends Pessoa implements Mostrar {
     private String especializacao;
     private List<Equipamento> equipamentos = new ArrayList<>();
 
-    public Tecnico(int id, String nome, String cpf, LocalDate dtNasc, String especializacao) {
+    public Tecnico(String id, String nome, String cpf, LocalDate dtNasc, String especializacao, List<Equipamento> equipamentos) {
         super(id, nome, cpf, dtNasc);
         this.especializacao = especializacao;
+        this.equipamentos = equipamentos != null ? equipamentos : new ArrayList<>();
     }
 
     public String getEspecializacao() {
@@ -44,7 +45,7 @@ public class Tecnico extends Pessoa implements Mostrar {
         System.out.println("ID: " + getId());
         System.out.println("Nome: " + getNome());
         System.out.println("CPF: " + getCpf());
-        System.out.println("Data de Nascimento: " + getDtNasc());
+        System.out.println("Data de Nascimento: " + getDtNasc().format(formato));
         System.out.println("Especialização: " + getEspecializacao());
 
         System.out.println("-Equipamentos Operados:");
@@ -66,7 +67,6 @@ public class Tecnico extends Pessoa implements Mostrar {
         System.out.println("--- Resumo do Tecnico ---");
         System.out.println("ID: " + getId());
         System.out.println("Nome: " + getNome());
-        System.out.println("CPF: " + getCpf());
         System.out.println("Especialização: " + getEspecializacao());
         System.out.println("===============================");
     }
