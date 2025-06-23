@@ -12,15 +12,15 @@ public class Pesquisador extends Pessoa implements Mostrar {
     public Pesquisador(String id, String nome, String cpf, LocalDate dtNasc, String areaAtuacao, List<String> afiliacoes) {
         super(id, nome, cpf, dtNasc);
         this.areaAtuacao = areaAtuacao;
-        this.afiliacoes = afiliacoes != null ? afiliacoes : new ArrayList<>();
+        this.afiliacoes = (afiliacoes != null) ? afiliacoes : new ArrayList<>();
     }
 
-    public String getArea_atuacao() {
+    public String getAreaAtuacao() {
         return areaAtuacao;
     }
 
-    public void setArea_atuacao(String area_atuacao) {
-        this.areaAtuacao = area_atuacao;
+    public void setAreaAtuacao(String areaAtuacao) {
+        this.areaAtuacao = areaAtuacao;
     }
 
     public List<String> getAfiliacoes() {

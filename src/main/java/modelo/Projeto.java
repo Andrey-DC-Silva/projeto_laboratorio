@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Projeto implements Mostrar {
-    
+
     DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     private String titulo;
@@ -17,15 +17,15 @@ public class Projeto implements Mostrar {
     private List<Pesquisador> pesquisadores = new ArrayList<>();
     private List<Experimento> experimentos = new ArrayList<>();
 
-    public Projeto(String titulo, String descricao, LocalDate dtInicio, LocalDate dtFim,
-            String status, List<Pesquisador> pesquisadores, List<Experimento> experimentos) {
+    public Projeto(String titulo, String descricao, LocalDate dtInicio, LocalDate dtFim, String status,
+    List<Pesquisador> pesquisadores, List<Experimento> experimentos) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dtInicio = dtInicio;
         this.dtFim = dtFim;
         this.status = status;
-        this.pesquisadores = pesquisadores != null ? pesquisadores : new ArrayList<>();
-        this.experimentos = experimentos != null ? experimentos : new ArrayList<>();
+        this.pesquisadores = (pesquisadores != null) ? pesquisadores : new ArrayList<>();
+        this.experimentos = (experimentos != null) ? experimentos : new ArrayList<>();
     }
 
     public String getTitulo() {
@@ -60,22 +60,6 @@ public class Projeto implements Mostrar {
         this.dtFim = dtFim;
     }
 
-    public List<Pesquisador> getPesquisadores() {
-        return pesquisadores;
-    }
-
-    public void setPesquisadores(List<Pesquisador> pesquisadores) {
-        this.pesquisadores = pesquisadores;
-    }
-
-    public List<Experimento> getExperimentos() {
-        return experimentos;
-    }
-
-    public void setExperimentos(List<Experimento> experimentos) {
-        this.experimentos = experimentos;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -84,10 +68,26 @@ public class Projeto implements Mostrar {
         this.status = status;
     }
 
+    public List<Pesquisador> getPesquisadores() {
+        return pesquisadores;
+    }
+
+    public void setPesquisadores(List<Pesquisador> pesquisadores) {
+        this.pesquisadores = pesquisadores;
+    }
+
     public void adicionarPesquisador(Pesquisador pesquisador) {
         if (pesquisador != null && !this.pesquisadores.contains(pesquisador)) {
             this.pesquisadores.add(pesquisador);
         }
+    }
+
+    public List<Experimento> getExperimentos() {
+        return experimentos;
+    }
+
+    public void setExperimentos(List<Experimento> experimentos) {
+        this.experimentos = experimentos;
     }
 
     public void adicionarExperimento(Experimento experimento) {

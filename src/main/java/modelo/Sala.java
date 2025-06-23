@@ -10,11 +10,11 @@ public class Sala implements Mostrar {
     private String estado;
     private List<Equipamento> equipamentos = new ArrayList<>();
 
-    public Sala(String codigo, String tipo, String estado) {
+    public Sala(String codigo, String tipo, String estado, List<Equipamento> equipamentos) {
         this.codigo = codigo;
         this.tipo = tipo;
         this.estado = estado;
-        this.equipamentos = equipamentos != null ? equipamentos : new ArrayList<>();
+        this.equipamentos = (equipamentos != null) ? equipamentos : new ArrayList<>();
     }
 
     public String getCodigo() {
@@ -23,20 +23,6 @@ public class Sala implements Mostrar {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
-    }
-
-    public List<Equipamento> getEquipamentos() {
-        return equipamentos;
-    }
-
-    public void setEquipamentos(List<Equipamento> equipamentos) {
-        this.equipamentos = equipamentos;
-    }
-
-    public void adicionarEquipamento(Equipamento equipamento) {
-        if (equipamento != null && !this.equipamentos.contains(equipamento)) {
-            this.equipamentos.add(equipamento);
-        }
     }
 
     public String getTipo() {
@@ -53,6 +39,20 @@ public class Sala implements Mostrar {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public List<Equipamento> getEquipamentos() {
+        return equipamentos;
+    }
+
+    public void setEquipamentos(List<Equipamento> equipamentos) {
+        this.equipamentos = equipamentos;
+    }
+
+    public void adicionarEquipamento(Equipamento equipamento) {
+        if (equipamento != null && !this.equipamentos.contains(equipamento)) {
+            this.equipamentos.add(equipamento);
+        }
     }
 
     @Override

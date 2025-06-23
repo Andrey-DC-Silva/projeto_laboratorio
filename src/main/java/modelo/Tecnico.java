@@ -12,7 +12,7 @@ public class Tecnico extends Pessoa implements Mostrar {
     public Tecnico(String id, String nome, String cpf, LocalDate dtNasc, String especializacao, List<Equipamento> equipamentos) {
         super(id, nome, cpf, dtNasc);
         this.especializacao = especializacao;
-        this.equipamentos = equipamentos != null ? equipamentos : new ArrayList<>();
+        this.equipamentos = (equipamentos != null) ? equipamentos : new ArrayList<>();
     }
 
     public String getEspecializacao() {

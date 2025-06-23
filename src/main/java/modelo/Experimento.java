@@ -17,12 +17,13 @@ public class Experimento implements Mostrar {
     private List<Equipamento> equipamentos = new ArrayList<>();
     private Pesquisador responsavel;
 
-    public Experimento(String codigo, String titulo, String descricao, LocalDate dtRealizacao, Sala sala, Pesquisador responsavel) {
+    public Experimento(String codigo, String titulo, String descricao, LocalDate dtRealizacao, Sala sala, List<Equipamento> equipamentos, Pesquisador responsavel) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.descricao = descricao;
         this.dtRealizacao = dtRealizacao;
         this.sala = sala;
+        this.equipamentos = (equipamentos != null) ? equipamentos : new ArrayList<>();
         this.responsavel = responsavel;
     }
 
@@ -70,8 +71,8 @@ public class Experimento implements Mostrar {
         return equipamentos;
     }
 
-    public void setEquipamento(List<Equipamento> equipamentosUsados) {
-        this.equipamentos = equipamentosUsados;
+    public void setEquipamento(List<Equipamento> equipamentos) {
+        this.equipamentos = equipamentos;
     }
 
     public void adicionarEquipamento(Equipamento equipamento) {

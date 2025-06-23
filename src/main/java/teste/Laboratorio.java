@@ -17,13 +17,15 @@ public class Laboratorio {
         Sala sala1 = new Sala(
                 "A101",
                 "Laboratório de Biologia",
-                "Livre"
+                "Livre",
+                null
         );
         
         Sala sala2 = new Sala(
                 "A201",
                 "Sala de Pesquisas",
-                "Livre"
+                "Livre",
+                null
         );
 
         Equipamento eq1 = new Equipamento(
@@ -81,6 +83,7 @@ public class Laboratorio {
                 + "mesmo na presença de medicamentos antivirais que normalmente o controlariam.",
                 LocalDate.parse("08/08/2021", formato),
                 sala1,
+                null,
                 pesquisador2
         );
 
@@ -90,6 +93,7 @@ public class Laboratorio {
                 "Organização, análise e documentação dos dados adquiridos",
                 LocalDate.parse("01/09/2021", formato),
                 sala2,
+                null,
                 pesquisador1
         );
 

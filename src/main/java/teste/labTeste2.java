@@ -18,17 +18,20 @@ public class labTeste2 {
         Sala sala1 = new Sala(
                 "A101",
                 "Laboratório de Biologia",
-                "Livre"
+                "Livre",
+                null
         );
         Sala sala2 = new Sala(
                 "A201",
                 "Sala de Pesquisas",
-                "Livre"
+                "Livre",
+                null
         );
         Sala sala3 = new Sala(
                 "B102",
                 "Laboratório de Química",
-                "Livre"
+                "Livre",
+                null
         );
 
         Equipamento eq1 = new Equipamento(
@@ -107,7 +110,9 @@ public class labTeste2 {
                 "O projeto visa explorar a aplicação de vacinas baseadas em RNA mensageiro no combate a doenças tropicais negligenciadas como dengue, chikungunya e zika.",
                 LocalDate.parse("10/06/2021", formato),
                 LocalDate.parse("12/01/2023", formato),
-                "Finalizado", null, null
+                "Finalizado",
+                null,
+                null
         );
 
         Projeto projeto2 = new Projeto(
@@ -115,7 +120,9 @@ public class labTeste2 {
                 "Investigar compostos extraídos de plantas com potencial farmacológico",
                 LocalDate.parse("01/03/2022", formato),
                 LocalDate.parse("01/10/2024", formato),
-                "Em Andamento", null, null
+                "Em Andamento",
+                null,
+                null
         );
 
         Experimento exp1 = new Experimento(
@@ -124,6 +131,7 @@ public class labTeste2 {
                 "Análise da capacidade de sobrevivência do vírus com antivirais.",
                 LocalDate.parse("08/08/2021", formato),
                 sala1,
+                null,
                 pesquisador2
         );
 
@@ -133,6 +141,7 @@ public class labTeste2 {
                 "Organização e documentação dos dados adquiridos.",
                 LocalDate.parse("01/09/2021", formato),
                 sala2,
+                null,
                 pesquisador1
         );
 
@@ -142,6 +151,7 @@ public class labTeste2 {
                 "Extração de substâncias bioativas de plantas nativas.",
                 LocalDate.parse("05/04/2023", formato),
                 sala3,
+                null,
                 pesquisador3
         );
 
@@ -151,6 +161,7 @@ public class labTeste2 {
                 "Determinação da pureza de extratos por espectrofotometria.",
                 LocalDate.parse("10/05/2023", formato),
                 sala3,
+                null,
                 pesquisador3
         );
 
@@ -171,12 +182,5 @@ public class labTeste2 {
         projeto2.adicionarExperimento(exp3);
         projeto2.adicionarExperimento(exp4);
 
-        // sala1.mostrarDados();
-        // eq1.mostrarDados();
-        // tecnico1.mostrarDados();
-        // pesquisador1.mostrarDados();
-        // exp1.mostrarDados();
-        // projeto1.mostrarDados();
-        
     }
 }
