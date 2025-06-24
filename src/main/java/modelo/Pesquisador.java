@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pesquisador extends Pessoa implements Mostrar {
+public class Pesquisador extends Pessoa {
 
     private String areaAtuacao;
     private List<String> afiliacoes = new ArrayList<>();

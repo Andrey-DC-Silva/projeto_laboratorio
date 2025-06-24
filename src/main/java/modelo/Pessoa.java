@@ -3,7 +3,7 @@ package modelo;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public abstract class Pessoa{
+public abstract class Pessoa implements Mostrar{
     
     DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     

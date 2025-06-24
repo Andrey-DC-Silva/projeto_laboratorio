@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tecnico extends Pessoa implements Mostrar {
+public class Tecnico extends Pessoa {
 
     private String especializacao;
     private List<Equipamento> equipamentos = new ArrayList<>();
