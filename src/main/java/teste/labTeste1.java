@@ -193,26 +193,26 @@ public class labTeste1 {
         todos.add(eq2);
         todos.add(eq3);
 
-        todos.add(exp1);
-        todos.add(exp2);
-        todos.add(exp3);
-        todos.add(exp4);
-
+        todos.add(tecnico1);
+        todos.add(tecnico2);
+        
         todos.add(pesquisador1);
         todos.add(pesquisador2);
         todos.add(pesquisador3);
 
-        todos.add(tecnico1);
-        todos.add(tecnico2);
-
         todos.add(projeto1);
         todos.add(projeto2);
 
-//        for (Mostrar t : todos) {
-//            t.mostrarDados();
-//        }
-//        for(Mostrar t : todos){
-//            t.mostrarResumo();
-//        }
+        todos.add(exp1);
+        todos.add(exp2);
+        todos.add(exp3);
+        todos.add(exp4);
+        
+        for (Mostrar t : todos) {
+            t.mostrarDados();
+        }
+        for(Mostrar t : todos){
+            t.mostrarResumo();
+        }
     }
 }

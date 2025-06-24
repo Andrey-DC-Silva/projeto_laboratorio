@@ -104,7 +104,7 @@ public class Experimento implements Mostrar {
         System.out.println("Descrição: " + descricao);
         System.out.println("Data de Realização: " + dtRealizacao.format(formato));
         System.out.println("Sala: " + sala);
-        System.out.println("Responsável: " + (responsavel != null ? responsavel.getNome() : "Não definido"));
+        System.out.println("Responsável - ID: " + responsavel.getId() + " / " + (responsavel != null ? responsavel.getNome() : "Não definido"));
 
         System.out.println("Equipamentos usados:");
         if (equipamentos.isEmpty()) {
@@ -121,7 +121,7 @@ public class Experimento implements Mostrar {
     public void mostrarResumo() {
         System.out.println("");
         System.out.println("===============================");
-        System.out.println("--- Resumo do Equipamento ---");
+        System.out.println("--- Resumo do Experimento ---");
         System.out.println("Codigo: " + codigo);
         System.out.println("Titulo: " + titulo);
         System.out.println("Data: " + dtRealizacao.format(formato));
