@@ -20,7 +20,7 @@ public class Laboratorio {
                 "Livre",
                 null
         );
-        
+
         Sala sala2 = new Sala(
                 "A201",
                 "Sala de Pesquisas",
@@ -106,24 +106,32 @@ public class Laboratorio {
 
         projeto1.adicionarExperimento(exp1);
         projeto1.adicionarExperimento(exp2);
+
         
-//        sala1.mostrarDados();
-//        sala1.mostrarResumo();
+        
+        sala1.mostrarDados();
+        sala1.mostrarResumo();
+        sala2.mostrarDados();
+        sala2.mostrarResumo();
 
-//        eq1.mostrarDados();
-//        eq1.mostrarResumo();
+        eq1.mostrarDados();
+        eq1.mostrarResumo();
 
-//        tecnico1.mostrarDados();
-//        tecnico1.mostrarResumo();
+        tecnico1.mostrarDados();
+        tecnico1.mostrarResumo();
 
-//        pesquisador1.mostrarDados();
-//        pesquisador1.mostrarResumo();
+        pesquisador1.mostrarDados();
+        pesquisador1.mostrarResumo();
+        pesquisador2.mostrarDados();
+        pesquisador2.mostrarResumo();
 
-//        exp1.mostrarDados();
-//        exp1.mostrarResumo();
+        exp1.mostrarDados();
+        exp1.mostrarResumo();
+        exp2.mostrarDados();
+        exp2.mostrarResumo();
 
-//        projeto1.mostrarDados();
-//        projeto1.mostrarResumo();
+        projeto1.mostrarDados();
+        projeto1.mostrarResumo();
 
-    }   
+    }
 }

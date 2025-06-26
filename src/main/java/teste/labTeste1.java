@@ -200,18 +200,16 @@ public class labTeste1 {
         todos.add(pesquisador2);
         todos.add(pesquisador3);
 
-        todos.add(projeto1);
-        todos.add(projeto2);
-
         todos.add(exp1);
         todos.add(exp2);
         todos.add(exp3);
         todos.add(exp4);
+
+        todos.add(projeto1);
+        todos.add(projeto2);
         
         for (Mostrar t : todos) {
             t.mostrarDados();
-        }
-        for(Mostrar t : todos){
             t.mostrarResumo();
         }
     }
